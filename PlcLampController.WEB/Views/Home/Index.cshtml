@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        #bulb {
+          width: 50%;
+        }
+        .filament {
+          transition: all 0.2s ease;
+        }
+        .cls-5 {
+          transition: all 1s ease;
+        }
+        /* #toggle:checked ~ body {
+          background: red;
+        } */
+        .enabled #bulb .filament {
+          fill: orange;
+        }
+        .enabled #bulb .cls-5 {
+          fill: #FFF9A3;
+        }
+        .prong {
+          fill: #6d6e71;
+        }
+        .cls-2 {
+          fill: #808285;
+        }
+        .cls-3 {
+          fill: #939598;
+        }
+        .cls-4 {
+          opacity: 0.51;
+        }
+        .cls-5 {
+          fill: #d1d3d4;
+        }
+    </style>
+}
+
+@section Scripts
+{
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="js/site.js"></script>
+}
+
+<div class="card container p-3" style="background-color: #f5f5f5">
+  <div class="row">
+
+    <div class="col">
+      <div class="mb-3">
+        <span>Status: <span class="badge bg-info" id="status"></span></span>
+      </div>
+
+      <div class="mb-3">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="s1">
+          <label class="form-check-label" for="s1">S1</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="s2">
+          <label class="form-check-label" for="s2">S2</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="s3">
+          <label class="form-check-label" for="s3">S3</label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col">
+      <svg xmlns="http://www.w3.org/2000/svg" id="bulb" viewBox="0 0 154.72 276.77">
+        <path d="M55.2 139.26l-.5 1.67 4.63 15.48.5-1.67-4.63-15.48zM85.62 123.84l-.5 1.67 4.63 15.48.49-1.67-4.62-15.48z" class="filament"/>
+        <path d="M90.24 139.32l-.49 1.67 4.62 15.48.5-1.67-4.63-15.48zM68.11 123.84l-.5 1.67 4.62 15.48.5-1.67-4.62-15.48z" class="filament"/>
+        <path d="M72.73 139.32l-.5 1.67 4.63 15.48.5-1.67-4.63-15.48zM58.85 154.8l.5 1.67 4.63-15.48-.5-1.67-4.63 15.48z" class="filament"/>
+        <path d="M76.36 154.8l.5 1.67 4.63-15.48-.5-1.67-4.63 15.48zM63.48 139.32l.5 1.67 4.62-15.48-.49-1.67-4.63 15.48zM80.99 139.32l.5 1.67 4.62-15.48-.49-1.67-4.63 15.48zM93.88 154.8l.49 1.67L99 140.99l-.5-1.67-4.62 15.48z" class="filament"/>
+        <rect width="2.36" height="59.85" x="53.05" y="138.65" class="prong" rx="1.18" ry="1.18"/>
+        <rect width="2.36" height="58.81" x="98.3" y="138.65" class="prong" rx="1.18" ry="1.18"/>
+        <path d="M41.05 193.11h71.61v46.03H41.05z" class="cls-2"/>
+        <ellipse cx="76.85" cy="239.14" class="cls-2" rx="35.81" ry="37.63"/>
+        <rect width="83" height="6.33" x="276.75" y="505.69" class="cls-3" rx="3.17" ry="3.17" transform="rotate(13.12 1474.696 -687.534)"/>
+        <rect width="83" height="6.33" x="277.26" y="518.19" class="cls-3" rx="3.17" ry="3.17" transform="rotate(13.12 1475.208 -675.038)"/>
+        <rect width="83" height="6.33" x="277.51" y="530.7" class="cls-3" rx="3.17" ry="3.17" transform="rotate(13.12 1475.454 -662.554)"/>
+        <rect width="27.39" height="6.33" x="278.36" y="536.89" class="cls-3" rx="3.17" ry="3.17" transform="rotate(13.12 1448.504 -656.327)"/>
+        <rect width="27.47" height="6.33" x="330.82" y="499.48" class="cls-3" rx="3.17" ry="3.17" transform="rotate(13.12 1500.99 -693.73)"/>
+        <g class="cls-4">
+          <rect width="94.5" height="30.6" x="30.11" y="169.86" class="cls-5" rx="12.26" ry="12.26"/>
+          <circle cx="77.36" cy="77.36" r="77.36" class="cls-5"/>
+          <path d="M16.24 124.35c4 0 13.86 40.77 13.86 57.21h94.5c0-16.44 9.88-57.21 13.86-57.21H16.24z" class="cls-5"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+
+
+
+
